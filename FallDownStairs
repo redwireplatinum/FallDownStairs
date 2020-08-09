@@ -1,0 +1,265 @@
+local FallDownStairsGUI = Instance.new("ScreenGui")
+local MainFrame = Instance.new("Frame")
+local GUITitle = Instance.new("TextLabel")
+local ItemName = Instance.new("TextBox")
+local ItemGet = Instance.new("TextButton")
+local Plinko = Instance.new("TextButton")
+local Pyramid = Instance.new("TextButton")
+local Slide = Instance.new("TextButton")
+local Plrname = Instance.new("TextBox")
+local Explode = Instance.new("TextButton")
+local stealhats = Instance.new("TextButton")
+local velocity = Instance.new("TextButton")
+local invisible = Instance.new("TextButton")
+--Properties:
+FallDownStairsGUI.Name = "Fall Down Stairs GUI"
+FallDownStairsGUI.Parent = game.CoreGui
+FallDownStairsGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = FallDownStairsGUI
+MainFrame.Active = true
+MainFrame.BackgroundColor3 = Color3.new(1, 1, 1)
+MainFrame.Position = UDim2.new(0.668091476, 0, 0.472324729, 0)
+MainFrame.Size = UDim2.new(0, 245, 0, 185)
+MainFrame.Style = Enum.FrameStyle.RobloxRound
+
+GUITitle.Name = "GUITitle"
+GUITitle.Parent = MainFrame
+GUITitle.BackgroundColor3 = Color3.new(1, 1, 1)
+GUITitle.Position = UDim2.new(-0.0285714287, 0, -0.0710918531, 0)
+GUITitle.Size = UDim2.new(0, 244, 0, 41)
+GUITitle.Font = Enum.Font.SciFi
+GUITitle.Text = "RedWire's Fall Down Stairs GUI"
+GUITitle.TextColor3 = Color3.new(0, 0, 0)
+GUITitle.TextScaled = true
+GUITitle.TextSize = 14
+GUITitle.TextWrapped = true
+
+ItemName.Name = "ItemName"
+ItemName.Parent = MainFrame
+ItemName.BackgroundColor3 = Color3.new(0.054902, 0.262745, 0)
+ItemName.Position = UDim2.new(-0.0226238631, 0, 0.174870342, 0)
+ItemName.Size = UDim2.new(0, 157, 0, 29)
+ItemName.Font = Enum.Font.Code
+ItemName.PlaceholderText = "Type Item name here"
+ItemName.Text = ""
+ItemName.TextColor3 = Color3.new(0.698039, 0.698039, 0.698039)
+ItemName.TextScaled = true
+ItemName.TextSize = 14
+ItemName.TextWrapped = true
+
+ItemGet.Name = "ItemGet"
+ItemGet.Parent = MainFrame
+ItemGet.BackgroundColor3 = Color3.new(0.00392157, 0.282353, 0)
+ItemGet.Position = UDim2.new(0.660420835, 0, 0.174193233, 0)
+ItemGet.Size = UDim2.new(0, 85, 0, 29)
+ItemGet.Font = Enum.Font.Code
+ItemGet.Text = "Get Item"
+ItemGet.TextColor3 = Color3.new(1, 1, 1)
+ItemGet.TextSize = 14
+ItemGet.TextStrokeColor3 = Color3.new(1, 0, 0)
+ItemGet.TextWrapped = true
+
+Plinko.Name = "Plinko"
+Plinko.Parent = MainFrame
+Plinko.BackgroundColor3 = Color3.new(0.741176, 0.741176, 0.741176)
+Plinko.Position = UDim2.new(-0.0004177792, 0, 0.377728611, 0)
+Plinko.Size = UDim2.new(0, 75, 0, 31)
+Plinko.Font = Enum.Font.Code
+Plinko.Text = "TP to Plinko"
+Plinko.TextColor3 = Color3.new(0, 0, 0)
+Plinko.TextScaled = true
+Plinko.TextSize = 14
+Plinko.TextWrapped = true
+
+Pyramid.Name = "Pyramid"
+Pyramid.Parent = MainFrame
+Pyramid.BackgroundColor3 = Color3.new(0.741176, 0.741176, 0.741176)
+Pyramid.Position = UDim2.new(0.365754783, 0, 0.39109695, 0)
+Pyramid.Size = UDim2.new(0, 62, 0, 27)
+Pyramid.Font = Enum.Font.Code
+Pyramid.Text = "TP to Pyramid"
+Pyramid.TextColor3 = Color3.new(0, 0, 0)
+Pyramid.TextScaled = true
+Pyramid.TextSize = 14
+Pyramid.TextWrapped = true
+
+Slide.Name = "Slide"
+Slide.Parent = MainFrame
+Slide.BackgroundColor3 = Color3.new(0.741176, 0.741176, 0.741176)
+Slide.Position = UDim2.new(0.712250113, 0, 0.388189197, 0)
+Slide.Size = UDim2.new(0, 63, 0, 27)
+Slide.Font = Enum.Font.Code
+Slide.Text = "TP to Slide"
+Slide.TextColor3 = Color3.new(0, 0, 0)
+Slide.TextScaled = true
+Slide.TextSize = 14
+Slide.TextWrapped = true
+
+Plrname.Name = "Plrname"
+Plrname.Parent = MainFrame
+Plrname.BackgroundColor3 = Color3.new(0.811765, 0.341176, 0.00392157)
+Plrname.Position = UDim2.new(-0.031712871, 0, 0.600383699, 0)
+Plrname.Size = UDim2.new(0, 159, 0, 29)
+Plrname.Font = Enum.Font.Code
+Plrname.PlaceholderColor3 = Color3.new(0, 0, 0)
+Plrname.PlaceholderText = "Player to explode (leave blank to explode everyone)"
+Plrname.Text = ""
+Plrname.TextColor3 = Color3.new(0.698039, 0.698039, 0.698039)
+Plrname.TextScaled = true
+Plrname.TextSize = 14
+Plrname.TextWrapped = true
+
+Explode.Name = "Explode"
+Explode.Parent = MainFrame
+Explode.BackgroundColor3 = Color3.new(0.760784, 0, 0)
+Explode.Position = UDim2.new(0.664502442, 0, 0.6020329, 0)
+Explode.Size = UDim2.new(0, 85, 0, 29)
+Explode.Font = Enum.Font.Code
+Explode.Text = "Explode Player"
+Explode.TextColor3 = Color3.new(1, 1, 1)
+Explode.TextSize = 14
+Explode.TextStrokeColor3 = Color3.new(1, 0, 0)
+Explode.TextWrapped = true
+
+stealhats.Name = "stealhats"
+stealhats.Parent = MainFrame
+stealhats.BackgroundColor3 = Color3.new(0.741176, 0.741176, 0.741176)
+stealhats.Position = UDim2.new(-0.0004177792, 0, 0.820971847, 0)
+stealhats.Size = UDim2.new(0, 75, 0, 31)
+stealhats.Font = Enum.Font.Code
+stealhats.Text = "Steal all hats"
+stealhats.TextColor3 = Color3.new(0, 0, 0)
+stealhats.TextScaled = true
+stealhats.TextSize = 14
+stealhats.TextWrapped = true
+
+velocity.Name = "velocity"
+velocity.Parent = MainFrame
+velocity.BackgroundColor3 = Color3.new(0.741176, 0.741176, 0.741176)
+velocity.Position = UDim2.new(0.693459809, 0, 0.820971847, 0)
+velocity.Size = UDim2.new(0, 75, 0, 31)
+velocity.Font = Enum.Font.Code
+velocity.Text = "Fix part Velocity thing"
+velocity.TextColor3 = Color3.new(0, 0, 0)
+velocity.TextScaled = true
+velocity.TextSize = 14
+velocity.TextWrapped = true
+
+invisible.Name = "invisible"
+invisible.Parent = MainFrame
+invisible.BackgroundColor3 = Color3.new(0.741176, 0.741176, 0.741176)
+invisible.Position = UDim2.new(0.354684293, 0, 0.820971847, 0)
+invisible.Size = UDim2.new(0, 75, 0, 31)
+invisible.Font = Enum.Font.Code
+invisible.Text = "Visibility Toggle"
+invisible.TextColor3 = Color3.new(0, 0, 0)
+invisible.TextScaled = true
+invisible.TextSize = 14
+invisible.TextWrapped = true
+-- Scripts:
+function SCRIPT_KQRM85_FAKESCRIPT() -- ItemGet.LocalScript 
+	local script = Instance.new('LocalScript')
+	script.Parent = ItemGet
+	script.Parent.MouseButton1Down:connect(function()
+		for i, Item in ipairs(game.ReplicatedStorage.ShopItems:GetChildren()) do
+			local itemname = script.Parent.Parent.ItemName.Text
+			if string.match (string.lower(Item.Name), string.lower(itemname)) then
+				game.ReplicatedStorage.Events.PlayerShopPurchase:FireServer(Item.Name, 0)
+			end
+		end
+	end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_KQRM85_FAKESCRIPT))
+function SCRIPT_IBAQ76_FAKESCRIPT() -- Plinko.LocalScript 
+	local script = Instance.new('LocalScript')
+	script.Parent = Plinko
+	script.Parent.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Dest_Plinko.CFrame
+	end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_IBAQ76_FAKESCRIPT))
+function SCRIPT_IWKD81_FAKESCRIPT() -- Pyramid.LocalScript 
+	local script = Instance.new('LocalScript')
+	script.Parent = Pyramid
+	script.Parent.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Dest_Pyramid.CFrame
+	end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_IWKD81_FAKESCRIPT))
+function SCRIPT_ICFP71_FAKESCRIPT() -- Slide.LocalScript 
+	local script = Instance.new('LocalScript')
+	script.Parent = Slide
+	script.Parent.MouseButton1Down:connect(function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Dest_Slide.CFrame
+	end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_ICFP71_FAKESCRIPT))
+function SCRIPT_YIJW85_FAKESCRIPT() -- MainFrame.Draggable 
+	local script = Instance.new('LocalScript')
+	script.Parent = MainFrame
+	script.Parent.Draggable = true
+
+end
+coroutine.resume(coroutine.create(SCRIPT_YIJW85_FAKESCRIPT))
+function SCRIPT_VACM90_FAKESCRIPT() -- Explode.LocalScript 
+	local script = Instance.new('LocalScript')
+	script.Parent = Explode
+	script.Parent.MouseButton1Down:connect(function()
+		for i, plr in ipairs(game.Players:GetPlayers()) do
+			local plrname = script.Parent.Parent.Plrname.Text
+			if string.match (string.lower(plr.Name), string.lower(plrname)) then
+			if workspace:FindFirstChild(plr.Name) then
+				game.ReplicatedStorage.Events.GenerateExplosion:FireServer(100, 100000000, plr.Character.Torso.Position)
+			end
+			end
+		end
+	end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_VACM90_FAKESCRIPT))
+function SCRIPT_CFZP80_FAKESCRIPT() -- stealhats.LocalScript 
+	local script = Instance.new('LocalScript')
+	script.Parent = stealhats
+	script.Parent.MouseButton1Down:connect(function()
+	for i, plr in ipairs(game.Players:GetPlayers()) do
+		game.ReplicatedStorage.Events.TransferHats:FireServer(workspace[plr.Name])
+	end
+	end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_CFZP80_FAKESCRIPT))
+function SCRIPT_OJGU88_FAKESCRIPT() -- velocity.LocalScript 
+	local script = Instance.new('LocalScript')
+	script.Parent = velocity
+	script.Parent.MouseButton1Down:connect(function()
+	for i, child in ipairs(workspace:GetDescendants()) do
+		if child:IsA("BasePart") then
+			if child.Velocity ~= Vector3.new(0, 0, 0) then
+				child.Velocity = Vector3.new(0, 0, 0)
+			end
+		end
+	end
+	end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_OJGU88_FAKESCRIPT))
+function SCRIPT_VFAZ67_FAKESCRIPT() -- invisible.LocalScript 
+	local script = Instance.new('LocalScript')
+	script.Parent = invisible
+	script.Parent.MouseButton1Down:connect(function()
+		local torso = game.Players.LocalPlayer.Character.Torso
+		if torso.Transparency == 0 then
+		game.ReplicatedStorage.Events.SetPlayerTransparency:FireServer(1)
+		elseif torso.Transparency == 1 then
+		game.ReplicatedStorage.Events.SetPlayerTransparency:FireServer(0)
+		end
+	end)
+
+end
+coroutine.resume(coroutine.create(SCRIPT_VFAZ67_FAKESCRIPT))
