@@ -1,3 +1,4 @@
+if game.PlaceId == 6139078 then
 local FallDownStairsGUI = Instance.new("ScreenGui")
 local MainFrame = Instance.new("Frame")
 local GUITitle = Instance.new("TextLabel")
@@ -263,3 +264,5 @@ function SCRIPT_VFAZ67_FAKESCRIPT() -- invisible.LocalScript
 
 end
 coroutine.resume(coroutine.create(SCRIPT_VFAZ67_FAKESCRIPT))
+
+end
