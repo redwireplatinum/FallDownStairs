@@ -163,7 +163,7 @@ invisible.TextWrapped = true
 function SCRIPT_KQRM85_FAKESCRIPT() -- ItemGet.LocalScript 
 	local script = Instance.new('LocalScript')
 	script.Parent = ItemGet
-	script.Parent.MouseButton1Down:connect(function()
+	script.Parent.MouseButton1Click:connect(function()
 		for i, Item in ipairs(game.ReplicatedStorage.ShopItems:GetChildren()) do
 			local itemname = script.Parent.Parent.ItemName.Text
 			if string.match (string.lower(Item.Name), string.lower(itemname)) then
@@ -177,7 +177,7 @@ coroutine.resume(coroutine.create(SCRIPT_KQRM85_FAKESCRIPT))
 function SCRIPT_IBAQ76_FAKESCRIPT() -- Plinko.LocalScript 
 	local script = Instance.new('LocalScript')
 	script.Parent = Plinko
-	script.Parent.MouseButton1Down:connect(function()
+	script.Parent.MouseButton1Click:connect(function()
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Dest_Plinko.CFrame
 	end)
 
@@ -186,7 +186,7 @@ coroutine.resume(coroutine.create(SCRIPT_IBAQ76_FAKESCRIPT))
 function SCRIPT_IWKD81_FAKESCRIPT() -- Pyramid.LocalScript 
 	local script = Instance.new('LocalScript')
 	script.Parent = Pyramid
-	script.Parent.MouseButton1Down:connect(function()
+	script.Parent.MouseButton1Click:connect(function()
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Dest_Pyramid.CFrame
 	end)
 
@@ -195,7 +195,7 @@ coroutine.resume(coroutine.create(SCRIPT_IWKD81_FAKESCRIPT))
 function SCRIPT_ICFP71_FAKESCRIPT() -- Slide.LocalScript 
 	local script = Instance.new('LocalScript')
 	script.Parent = Slide
-	script.Parent.MouseButton1Down:connect(function()
+	script.Parent.MouseButton1Click:connect(function()
 	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Dest_Slide.CFrame
 	end)
 
@@ -211,7 +211,7 @@ coroutine.resume(coroutine.create(SCRIPT_YIJW85_FAKESCRIPT))
 function SCRIPT_VACM90_FAKESCRIPT() -- Explode.LocalScript 
 	local script = Instance.new('LocalScript')
 	script.Parent = Explode
-	script.Parent.MouseButton1Down:connect(function()
+	script.Parent.MouseButton1Click:connect(function()
 		for i, plr in ipairs(game.Players:GetPlayers()) do
 			local plrname = script.Parent.Parent.Plrname.Text
 			if string.match (string.lower(plr.Name), string.lower(plrname)) then
@@ -227,7 +227,7 @@ coroutine.resume(coroutine.create(SCRIPT_VACM90_FAKESCRIPT))
 function SCRIPT_CFZP80_FAKESCRIPT() -- stealhats.LocalScript 
 	local script = Instance.new('LocalScript')
 	script.Parent = stealhats
-	script.Parent.MouseButton1Down:connect(function()
+	script.Parent.MouseButton1Click:connect(function()
 	for i, plr in ipairs(game.Players:GetPlayers()) do
 		game.ReplicatedStorage.Events.TransferHats:FireServer(workspace[plr.Name])
 	end
@@ -238,7 +238,7 @@ coroutine.resume(coroutine.create(SCRIPT_CFZP80_FAKESCRIPT))
 function SCRIPT_OJGU88_FAKESCRIPT() -- velocity.LocalScript 
 	local script = Instance.new('LocalScript')
 	script.Parent = velocity
-	script.Parent.MouseButton1Down:connect(function()
+	script.Parent.MouseButton1Click:connect(function()
 	for i, child in ipairs(workspace:GetDescendants()) do
 		if child:IsA("BasePart") then
 			if child.Velocity ~= Vector3.new(0, 0, 0) then
@@ -253,7 +253,7 @@ coroutine.resume(coroutine.create(SCRIPT_OJGU88_FAKESCRIPT))
 function SCRIPT_VFAZ67_FAKESCRIPT() -- invisible.LocalScript 
 	local script = Instance.new('LocalScript')
 	script.Parent = invisible
-	script.Parent.MouseButton1Down:connect(function()
+	script.Parent.MouseButton1Click:connect(function()
 		local torso = game.Players.LocalPlayer.Character.Torso
 		if torso.Transparency == 0 then
 		game.ReplicatedStorage.Events.SetPlayerTransparency:FireServer(1)
