@@ -18,6 +18,7 @@ local X = Instance.new("TextButton")
 --Properties:
 FallDownStairsGUI.Name = "FallDownStairsGUI"
 FallDownStairsGUI.Parent = game.CoreGui
+FallDownStairsGUI.Enabled = false
 FallDownStairsGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 MainFrame.Name = "MainFrame"
@@ -186,7 +187,7 @@ X.TextSize = 14
 X.TextStrokeTransparency = 0
 X.TextWrapped = true
 -- Scripts:
-function SCRIPT_OHBR69_FAKESCRIPT() -- FallDownStairsGUI.LocalScript 
+function SCRIPT_UUSE83_FAKESCRIPT() -- FallDownStairsGUI.LocalScript 
 	local script = Instance.new('LocalScript')
 	script.Parent = FallDownStairsGUI
 	local GUI = script.Parent.MainFrame
@@ -198,7 +199,7 @@ function SCRIPT_OHBR69_FAKESCRIPT() -- FallDownStairsGUI.LocalScript
 	end
 	GUI.ItemGet.MouseButton1Click:connect(function()
 	for i, Item in pairs(game.ReplicatedStorage.ShopItems:GetChildren()) do
-	local itemname = script.Parent.Parent.ItemName.Text
+	local itemname = GUI.ItemName.Text
 	if string.match (string.lower(Item.Name), string.lower(itemname)) then
 	game.ReplicatedStorage.Events.PlayerShopPurchase:FireServer(Item.Name, 0)
 	end
@@ -215,7 +216,7 @@ function SCRIPT_OHBR69_FAKESCRIPT() -- FallDownStairsGUI.LocalScript
 	end)
 	GUI.Explode.MouseButton1Click:connect(function()
 	for i, plr in pairs(game.Players:GetPlayers()) do
-	local plrname = script.Parent.Parent.Plrname.Text
+	local plrname = GUI.Plrname.Text
 	if string.match (string.lower(plr.Name), string.lower(plrname)) then
 	if workspace:FindFirstChild(plr.Name) then
 	game.ReplicatedStorage.Events.GenerateExplosion:FireServer(100, 100000000, plr.Character.Torso.Position)
@@ -225,7 +226,9 @@ function SCRIPT_OHBR69_FAKESCRIPT() -- FallDownStairsGUI.LocalScript
 	end)
 	GUI.stealhats.MouseButton1Click:connect(function()
 	for i, plr in pairs(game.Players:GetPlayers()) do
-	game.ReplicatedStorage.Events.TransferHats:FireServer(workspace[plr.Name])
+	if plr.Character then
+	game.ReplicatedStorage.Events.TransferHats:FireServer(plr.Character)
+	end
 	end
 	end)
 	GUI.velocity.MouseButton1Click:connect(function()
@@ -248,4 +251,4 @@ function SCRIPT_OHBR69_FAKESCRIPT() -- FallDownStairsGUI.LocalScript
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_OHBR69_FAKESCRIPT))
+coroutine.resume(coroutine.create(SCRIPT_UUSE83_FAKESCRIPT))
