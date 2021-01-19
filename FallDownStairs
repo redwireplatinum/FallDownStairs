@@ -85,7 +85,7 @@ TPPyramid.Parent = MainFrame
 TPPyramid.BackgroundColor3 = Color3.new(0.666667, 0.333333, 1)
 TPPyramid.Position = UDim2.new(0.332915634, 0, 0.322379261, 0)
 TPPyramid.Size = UDim2.new(0, 97, 0, 40)
-TPPyramid.Font = Enum.Font.Code
+TPPyramid.Font = Enum.Font.TitilliumWeb
 TPPyramid.Text = "TP to Pyramid"
 TPPyramid.TextColor3 = Color3.new(1, 1, 1)
 TPPyramid.TextScaled = true
@@ -139,7 +139,7 @@ stealhats.Parent = MainFrame
 stealhats.BackgroundColor3 = Color3.new(0.666667, 0.333333, 1)
 stealhats.Position = UDim2.new(-0.00041769637, 0, 0.489743292, 0)
 stealhats.Size = UDim2.new(0, 98, 0, 39)
-stealhats.Font = Enum.Font.Code
+stealhats.Font = Enum.Font.TitilliumWeb
 stealhats.Text = "Steal all hats"
 stealhats.TextColor3 = Color3.new(1, 1, 1)
 stealhats.TextScaled = true
@@ -152,7 +152,7 @@ velocity.Parent = MainFrame
 velocity.BackgroundColor3 = Color3.new(0.666667, 0.333333, 1)
 velocity.Position = UDim2.new(0.66463089, 0, 0.489743292, 0)
 velocity.Size = UDim2.new(0, 98, 0, 39)
-velocity.Font = Enum.Font.Code
+velocity.Font = Enum.Font.TitilliumWeb
 velocity.Text = "Fix part Velocity thing"
 velocity.TextColor3 = Color3.new(1, 1, 1)
 velocity.TextScaled = true
@@ -178,7 +178,7 @@ X.Parent = MainFrame
 X.BackgroundColor3 = Color3.new(0.392157, 0.392157, 0.392157)
 X.Position = UDim2.new(0.870748281, 0, 0, 0)
 X.Size = UDim2.new(0, 37, 0, 38)
-X.Font = Enum.Font.SourceSans
+X.Font = Enum.Font.TitilliumWeb
 X.Text = "×"
 X.TextColor3 = Color3.new(1, 0, 0)
 X.TextScaled = true
@@ -186,7 +186,7 @@ X.TextSize = 14
 X.TextStrokeTransparency = 0
 X.TextWrapped = true
 -- Scripts:
-function SCRIPT_PDGH74_FAKESCRIPT() -- FallDownStairsGUI.LocalScript 
+function SCRIPT_OHBR69_FAKESCRIPT() -- FallDownStairsGUI.LocalScript 
 	local script = Instance.new('LocalScript')
 	script.Parent = FallDownStairsGUI
 	local GUI = script.Parent.MainFrame
@@ -248,4 +248,4 @@ function SCRIPT_PDGH74_FAKESCRIPT() -- FallDownStairsGUI.LocalScript
 	end)
 
 end
-coroutine.resume(coroutine.create(SCRIPT_PDGH74_FAKESCRIPT))
+coroutine.resume(coroutine.create(SCRIPT_OHBR69_FAKESCRIPT))
