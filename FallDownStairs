@@ -18,7 +18,6 @@ local X = Instance.new("TextButton")
 --Properties:
 FallDownStairsGUI.Name = "FallDownStairsGUI"
 FallDownStairsGUI.Parent = game.CoreGui
-FallDownStairsGUI.Enabled = false
 FallDownStairsGUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 MainFrame.Name = "MainFrame"
